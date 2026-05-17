@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">PYVEX</h1>
 
 <p align="center">
@@ -320,3 +321,6 @@ Icon assets live in `assets/icons/` (a curated subset copied from Lucide).
 2. **Fonts.** Cormorant Garamond, Geist, and Geist Mono are all loaded from Google Fonts CDN. If you have licensed alternatives (e.g. Söhne, GT America, NB International), drop the woff2 files in `fonts/` and I'll swap.
 3. **Imagery.** Placeholder model imagery is used in the UI kit. Real AI-fashion model renders should replace these.
 4. **Icon set.** Lucide is my best guess. Confirm or substitute.
+=======
+# pyvex
+>>>>>>> cb7ca366224bba82e2d2e4f63f4d5fb82311ddbf
