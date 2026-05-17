@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verifying — PYVEX</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div id="root" style="display:flex;align-items:center;justify-content:center;min-height:100vh;flex-direction:column;gap:24px;">
+    <div style="position:relative;width:48px;height:48px;border-radius:999px;border:1px solid rgba(242,239,232,0.18);animation:spin-slow 1.4s linear infinite;">
+      <div style="position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:999px;background:var(--accent);box-shadow:0 0 10px var(--accent);"></div>
+    </div>
+    <div style="font-family:var(--font-display);font-style:italic;font-weight:300;font-size:24px;color:var(--fg-1);">Completing sign-in</div>
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;color:var(--fg-3);">ESTABLISHING SESSION</div>
+  </div>
+
+  <script src="clerk.js"></script>
+  <script>
+    (async () => {
+      try {
+        const clerk = await window.loadClerk();
+        await clerk.handleRedirectCallback({});
+        window.location.replace('index.html');
+      } catch (err) {
+        console.error('Verify redirect failed:', err);
+        document.querySelector('#root > div:nth-child(2)').textContent = 'Sign-in failed';
+        document.querySelector('#root > div:nth-child(3)').textContent = (err && err.message) || 'Try again from the login page.';
+        setTimeout(() => window.location.replace('login.html'), 2500);
+      }
+    })();
+  </script>
+</body>
+</html>

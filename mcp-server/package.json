@@ -1,0 +1,22 @@
+{
+  "name": "pyvex-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing PYVEX's styling intelligence — weather, outfit recommendations, skin tone palettes, and aesthetic-brand matching.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "pyvex-mcp": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "license": "MIT"
+}

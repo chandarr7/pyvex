@@ -1,0 +1,28 @@
+/* shared base for all preview cards — 700px design width */
+@import url('../colors_and_type.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg-1);
+  width: 700px;
+  overflow: hidden;
+}
+.card {
+  width: 700px;
+  padding: 28px 32px;
+  box-sizing: border-box;
+  position: relative;
+}
+.row { display: flex; align-items: center; gap: 16px; }
+.col { display: flex; flex-direction: column; }
+.mut { color: var(--fg-2); }
+.dim { color: var(--fg-3); }
+.label {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}

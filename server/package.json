@@ -1,0 +1,21 @@
+{
+  "name": "pyvex-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PYVEX backend — protected API that verifies Clerk session JWTs.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@clerk/backend": "^1.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  }
+}

@@ -1,0 +1,235 @@
+/* =====================================================================
+   PYVEX — colors_and_type.css
+   The single source of truth for design tokens. Import this file
+   anywhere you need the brand to look right.
+   ===================================================================== */
+
+/* ---------- Webfonts ---------------------------------------------------
+   All three families loaded from Google Fonts CDN.
+   If you have licensed alternatives (Söhne, GT America, NB International,
+   Bodoni Moda) drop the woff2 in /fonts/ and override the families below.
+   --------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+:root {
+  /* ================= COLOR — RAW PALETTE ============================= */
+  --obsidian:        #050707;  /* page field — slightly cool deep black  */
+  --carbon:          #0E1311;  /* primary card / panel surface           */
+  --graphite:        #1A211E;  /* elevated surface, hover background     */
+  --slate:           #232B28;  /* hairline floor for inputs              */
+
+  --emerald-deep:    #0A3A2E;  /* gradient floor                         */
+  --emerald-mid:     #15614A;  /* gradient mid                           */
+  --aura-emerald:    #46F3A8;  /* THE accent — neon jade                 */
+  --aura-emerald-2:  #7AFFC2;  /* hover glow halo                        */
+
+  --aura-gold:       #D4B886;  /* soft champagne gold — secondary accent */
+  --aura-gold-2:     #E8D2A4;  /* gold halo                              */
+
+  --bone:            #F2EFE8;  /* primary foreground — warm off-white    */
+  --smoke:           #8B928E;  /* secondary foreground                   */
+  --ash:             #4A524E;  /* tertiary, captions, disabled           */
+
+  /* ================= COLOR — SEMANTIC ================================ */
+  --bg:              var(--obsidian);
+  --bg-elev-1:       var(--carbon);
+  --bg-elev-2:       var(--graphite);
+  --bg-glass:        rgba(14, 19, 17, 0.6);
+
+  --fg-1:            var(--bone);
+  --fg-2:            var(--smoke);
+  --fg-3:            var(--ash);
+
+  --accent:          var(--aura-emerald);
+  --accent-soft:     rgba(70, 243, 168, 0.16);
+  --accent-glow:     rgba(70, 243, 168, 0.35);
+
+  --border:          rgba(242, 239, 232, 0.08);
+  --border-strong:   rgba(242, 239, 232, 0.16);
+  --border-accent:   rgba(70, 243, 168, 0.40);
+
+  /* signature jade gradient — for cinematic blooms behind heroes */
+  --gradient-jade:   linear-gradient(135deg, #0A3A2E 0%, #15614A 45%, #46F3A8 100%);
+  --gradient-fade:   linear-gradient(180deg, rgba(5,7,7,0) 0%, rgba(5,7,7,0.9) 100%);
+
+  /* ================= TYPE — FAMILIES ================================= */
+  --font-display:    'Cormorant Garamond', 'Bodoni Moda', Georgia, serif;
+  --font-ui:         'Geist', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  --font-mono:       'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ================= TYPE — SCALE (fluid) ============================ */
+  --fs-hero:         clamp(3.5rem, 8vw, 7.5rem);   /* 56 → 120px         */
+  --fs-display:      clamp(2.5rem, 5vw, 4.5rem);   /* 40 → 72px          */
+  --fs-h1:           clamp(2rem, 4vw, 3.25rem);    /* 32 → 52px          */
+  --fs-h2:           clamp(1.5rem, 2.6vw, 2.25rem);/* 24 → 36px          */
+  --fs-h3:           clamp(1.25rem, 1.8vw, 1.5rem);/* 20 → 24px          */
+  --fs-body-lg:      1.125rem;                     /* 18px               */
+  --fs-body:         1rem;                         /* 16px               */
+  --fs-body-sm:      0.875rem;                     /* 14px               */
+  --fs-caption:      0.75rem;                      /* 12px               */
+  --fs-eyebrow:      0.6875rem;                    /* 11px ALL CAPS      */
+
+  --lh-tight:        1.04;     /* display headlines                       */
+  --lh-snug:         1.15;     /* h1–h2                                   */
+  --lh-normal:       1.45;     /* body                                    */
+  --lh-loose:        1.6;      /* long-read paragraphs                    */
+
+  --tracking-tight:  -0.02em;  /* large serif                             */
+  --tracking-snug:   -0.01em;  /* h1/h2                                   */
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;   /* small caps                              */
+  --tracking-eyebrow:0.18em;   /* eyebrow ALL CAPS                        */
+
+  /* ================= SPACING (4-px base grid) ======================== */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   48px;
+  --space-8:   64px;
+  --space-9:   96px;
+  --space-10:  128px;
+  --space-11:  192px;
+
+  /* ================= RADII =========================================== */
+  --r-xs:      2px;
+  --r-sm:      8px;
+  --r-md:      12px;
+  --r-lg:      20px;
+  --r-xl:      28px;
+  --r-pill:    999px;
+
+  /* ================= GLOW / SHADOW =================================== */
+  --glow-soft:    0 0 40px rgba(70,243,168,0.15);
+  --glow-ring:    0 0 0 1px rgba(70,243,168,0.20), 0 0 40px rgba(70,243,168,0.15);
+  --glow-strong:  0 0 0 1px rgba(70,243,168,0.40), 0 0 80px rgba(70,243,168,0.30);
+  --inset-hl:     inset 0 1px 0 rgba(242,239,232,0.06);
+  --modal-lift:   0 24px 60px rgba(0,0,0,0.6);
+
+  /* ================= MOTION ========================================= */
+  --ease:          cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-micro:     180ms;
+  --dur-short:     300ms;
+  --dur-medium:    600ms;
+  --dur-long:      1200ms;
+
+  /* ================= LAYOUT ========================================= */
+  --container:     1280px;
+  --gutter:        clamp(24px, 4vw, 64px);
+  --nav-height:    64px;
+}
+
+/* =====================================================================
+   SEMANTIC / ELEMENT DEFAULTS
+   ===================================================================== */
+html, body {
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-ui);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* — Headlines — serif, tight, sentence case. ALWAYS end declaratives . */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg-1);
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg-1);
+}
+h3, .h3 {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-normal);
+  color: var(--fg-1);
+}
+.display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.hero {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--fs-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.hero em, .display em, h1 em, h2 em {
+  font-style: italic;
+  color: var(--fg-1);
+}
+
+/* — Body — */
+p, .body { font-size: var(--fs-body); line-height: var(--lh-loose); color: var(--fg-2); }
+.body-lg { font-size: var(--fs-body-lg); line-height: var(--lh-loose); color: var(--fg-2); }
+.body-sm { font-size: var(--fs-body-sm); line-height: var(--lh-normal); color: var(--fg-2); }
+.caption { font-size: var(--fs-caption); line-height: var(--lh-normal); color: var(--fg-3); }
+
+/* — Eyebrow — small caps, tracked, with the · dot */
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.eyebrow::before {
+  content: "";
+  width: 6px; height: 6px; border-radius: 999px;
+  background: var(--accent);
+  box-shadow: var(--glow-soft);
+}
+
+/* — Mono — for numbers, scores, AI confidence */
+.mono, code, kbd {
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum' 1, 'ss01' 1;
+  font-size: 0.875em;
+  color: var(--fg-1);
+}
+
+/* — Links — */
+a {
+  color: var(--fg-1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color var(--dur-short) var(--ease), color var(--dur-short) var(--ease);
+}
+a:hover { color: var(--accent); border-color: var(--border-accent); }
+
+/* — HR — */
+hr { border: 0; height: 1px; background: var(--border); margin: var(--space-7) 0; }
+
+/* — Selection — */
+::selection { background: var(--accent); color: var(--obsidian); }
+
+/* — Scrollbar (webkit) — */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--graphite); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--slate); }
